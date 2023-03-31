@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from "react-native";
 import { TextInput } from "react-native-paper";
 import { colors } from "../utils/colors";
 import { spacing, button } from "../utils/sizes";
-import { RoundedButton } from "../comonents/RoundedButton";
+import { RoundedButton } from "../components/RoundedButton";
 
 export const Focus = ({ addSubject }) => {
   const [subject, setSubject] = useState(null);
