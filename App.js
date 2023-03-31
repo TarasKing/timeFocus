@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   StyleSheet,
   View,
@@ -10,6 +10,8 @@ import { colors } from "./src/utils/colors";
 import { Focus } from "./src/features/Focus";
 
 export default function App() {
+  const { currentSubject, setCurrentSubject } = useState(null);
+
   return (
     <SafeAreaView style={styles.container}>
       <Focus />
