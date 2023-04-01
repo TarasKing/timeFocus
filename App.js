@@ -11,7 +11,7 @@ import { colors } from "./src/utils/colors";
 import { Focus } from "./src/features/Focus";
 import { Timer } from "./src/features/Timer";
 export default function App() {
-  const [currentSubject, setCurrentSubject] = useState("test");
+  const [currentSubject, setCurrentSubject] = useState("");
 
   return (
     <SafeAreaView style={styles.container}>
@@ -21,7 +21,9 @@ export default function App() {
         <Timer
           focusSubject={currentSubject}
           onTimerEnd={() => {}}
-          clearSubject={() => {}}
+          clearSubject={() => {
+            setCurrentSubject(null);
+          }}
         />
       )}
     </SafeAreaView>

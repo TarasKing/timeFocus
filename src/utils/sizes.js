@@ -18,4 +18,5 @@ export const spacing = {
 
 export const button = {
   sm: 50,
+  md: 75,
 };
