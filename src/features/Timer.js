@@ -27,6 +27,7 @@ export const Timer = ({ focusSubject, onTimerEnd, clearSubject }) => {
     setIsStarted(false);
     setProgress(1);
     reset();
+    onTimerEnd(focusSubject);
   };
 
   return (
