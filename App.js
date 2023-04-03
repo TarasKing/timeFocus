@@ -14,10 +14,7 @@ import { FocusHistory } from "./src/features/FocusHistory";
 
 export default function App() {
   const [currentSubject, setCurrentSubject] = useState("");
-  const [history, setHistory] = useState([
-    { id: 1, title: "temp feature focus" },
-    { id: 2, title: "second temp feature focus" },
-  ]);
+  const [history, setHistory] = useState([]);
   return (
     <SafeAreaView style={styles.container}>
       {!currentSubject ? (
@@ -28,7 +25,12 @@ export default function App() {
       ) : (
         <Timer
           focusSubject={currentSubject}
-          onTimerEnd={(su) => {}}
+          onTimerEnd={(subject) => {
+            setHistory([
+              ...history,
+              { id: history.length + 1, title: subject },
+            ]);
+          }}
           clearSubject={() => {
             setCurrentSubject(null);
           }}

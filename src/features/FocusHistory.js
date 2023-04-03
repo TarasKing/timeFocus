@@ -12,7 +12,10 @@ const Item = (item) => {
 };
 
 export const FocusHistory = ({ history }) => {
-  //   if (!history || !history.length) return null;
+  if (!history || !history.length)
+    return (
+      <Text style={styles.title}>You haven't focused on anything yet</Text>
+    );
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Things I've focused on:</Text>
